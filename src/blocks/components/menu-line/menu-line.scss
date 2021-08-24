@@ -1,0 +1,43 @@
+.menu-line {
+  background-color: $bg-menu-line;
+}
+
+.menu-line__list {
+  @include ul-none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-line__link {
+  position: relative;
+  display: block;
+  margin: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  transition: $time;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: transparent;
+    bottom: 0px;
+    left: 0;
+    width: 1px;
+    transition: $time;
+  }
+
+  &:hover::before {
+    background: $white;
+    width: 100%;
+  }
+
+  &.active {
+    &::before {
+      background: $white;
+      width: 100%;
+    }
+  }
+}

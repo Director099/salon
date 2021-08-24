@@ -1,0 +1,49 @@
+extends pug/layout.pug
+
+block meta
+  title Главная
+block header
+  +page-header()
+block content
+  main
+    .main-picture(style="background-image: url('img/decor/salon.jpg')")
+    +menu-line({
+      list: menu
+    }).scrollto
+    +block-content()(id="about-us").block-content--light
+      .block-content__text-content
+        section.text-content
+          h1 О НАС
+          p Концепция бренда KEEP LOOKING берет свое начало от игры слов «keep» - продолжай, сохраняй и «look» – образ, взгляд. Дословно это выражение можно перевести, как продолжай искать…
+          h2 ГАРМОНИЮ МЕЖДУ СВОЕЙ ИСТИННОЙ ВНУТРЕННЕЙ КРАСОТОЙ И ВНЕШНИМ ОБРАЗОМ
+          p Наши мастера подобно гениальным художникам ищут свое вдохновение в подлинной женской красоте, работая над каждым образом, словно над изящным произведением классического искусства, чувствуя вашу индивидуальность, неповторимый характер и неуловимое настроение.
+          h3 ПРАВИЛА ОБСЛУЖИВАНИЯ
+          p Для предупреждения распространения коронавирусной инфекции на период режима повышенной готовности в г. Москва Согласно Указу Мэра Москвы от 05.03.2020 N 12-УМ Пункт 9.
+          p С 1 июня 2020 г. использовать средства индивидуальной защиты органов дыхания (маски, респираторы) в иных случаях покидания места проживания (пребывания), в том числе в целях прогулки и занятий физической культурой и спортом в соответствии с приложением 8 к настоящему указу, а в случае посещения зданий, строений, сооружений (помещений в них) дополнительно использовать средства индивидуальной защиты рук (перчатки). Посещая салон красоты клиент предоставляет согласие на проведение термометрии. Салон красоты вправе отказать любому клиенту при наличии повышенной температуры тела или отказа в проведении термометрии. Согласно п. 2 ст 426 ГК РФ вышеуказанные условие являются одинаковыми для всех потребителей.
+    +tabs-slider()(id="services")
+    +block-content()(id="price").block-content--light
+      header.block-content__header
+        h2.title-text ПРАЙС ЛИСТ
+      .faq
+        each item, i in price
+          - const {title} = item
+          +collapse({
+            title: title,
+          })
+    +block-content()(id="gallary").overflow-hidden
+      header.block-content__header
+        h2.title-text Галерея
+      +gallary()
+    +block-content().block-content--image(style="background-image: url('img/decor/maybe.jpg')")
+      p.block-content__decor-text keep · looking #[br] is · the · beauty · that #[br] was · born · from #[br] our · souls
+    +block-content()(id="contact")
+      header.block-content__header
+        h2.title-text НАШ INSTAGRAM
+      .result
+        .result__row
+          each item, i in photoInstagram
+            - const {img} = item
+            a.result__link(href="https://www.instagram.com/" target="_blank")
+              img(src=`img/content/${img}`, alt="Фото")
+block footer
+  +page-footer()

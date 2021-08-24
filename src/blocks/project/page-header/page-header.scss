@@ -1,0 +1,19 @@
+.page-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 99;
+}
+
+.page-header__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__nav {
+  width: 55%;
+}

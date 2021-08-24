@@ -1,0 +1,23 @@
+.text-content {
+  font-family: $font-family2;
+  font-weight: 400;
+
+
+  h1,
+  h2,
+  h3 {
+    font-size: 24px;
+    line-height: 29px;
+    //font-size: 22px;
+    //line-height: 36px;
+    margin-bottom: 20px;
+    color: #323232;
+    text-transform: uppercase;
+    font-family: $font-family2;
+    font-weight: 400;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

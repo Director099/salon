@@ -1,0 +1,58 @@
+// Style plagin
+@import "variables";
+
+// @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+// My style
+
+@import "grid-mixins";
+
+@import "functions";
+
+@import "fonts";
+@import "global";
+
+@import "../blocks/components/text-content/text-content";
+@import "../blocks/components/block-content/block-content";
+@import "../blocks/components/btn/btn";
+@import "../blocks/components/container/container";
+@import "../blocks/components/collapse/collapse";
+@import "../blocks/components/menu-line/menu-line";
+@import "../blocks/components/title-text/title-text";
+@import "../blocks/components/link/link";
+@import "../blocks/components/copyright/copyright";
+@import "../blocks/components/table/table";
+@import "../blocks/components/tabs/tabs";
+@import "../blocks/components/menu/menu";
+@import "../blocks/components/logo/logo";
+
+@import "../blocks/project/page-header/page-header";
+@import "../blocks/project/page-footer/page-footer";
+@import "../blocks/project/order-page/order-page";
+@import "../blocks/project/main-picture/main-picture";
+@import "../blocks/project/result/result";
+@import "../blocks/project/gallary/gallary";
+@import "../blocks/project/specifications/specifications";
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.swiper-scrollbar {
+  //padding: 0 20px;
+  background: #a29075;
+  height: 1px;
+  bottom: 10px;
+  margin-top: 60px;
+  //opacity: 1 !important;
+}
+
+.swiper-scrollbar-drag:before {
+  content: ' ';
+  background: #a29075;
+  height: 15px;
+  width: 15px !important;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -7px;
+}

@@ -1,0 +1,8 @@
+mixin menu-line({list})
+  .menu-line&attributes(attributes)
+    .container
+      ul.menu-line__list
+        each item, i in list
+          - const {text, className, href} = item
+          li.menu-line__item
+            a.menu-line__link(class= className, href= href)= text

@@ -1,0 +1,14 @@
+mixin page-header()
+  header.page-header
+    .container
+      .page-header__row
+        +logo('/')
+          span Keep Looking
+        .page-header__nav.scrollto
+          ul.menu
+            each item, i in menu
+              - const {text, href} = item
+              li.menu-item
+                a(href= href)= text
+        .page-header__info
+          a.link(href="tel:+7 499 350 80 50") +7 499 350 80 50

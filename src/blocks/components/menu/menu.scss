@@ -1,0 +1,14 @@
+.menu {
+  @include ul-none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-family: $font-family2;
+  font-size: 16px;
+}

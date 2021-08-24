@@ -1,0 +1,32 @@
+mixin tabs-slider()
+  .tabs-slider&attributes(attributes)
+    +menu-line({
+      list: tabs
+    }).js-tab-slider
+    .specifications
+      .swiper-container.swiper-tabs
+        .swiper-wrapper
+          each item, i in specification
+            - const {title, img} = item
+            .swiper-slide
+              .specifications__row
+                .specifications__column
+                  img.specifications__picture(src=`img/content/${img}`, alt="Изображение")
+                .specifications__column
+                  section.specifications__content
+                    h2.specifications__title= title
+                    .specifications__desc
+                      p День свадьбы - один из самых необыкновенных и по-настоящему особенных моментов в жизни каждой девушки. Доверьте нам свое настроение, естественную и чистую красоту, а мы со свойственным нам профессионализмом воплотим вашу сказку в жизнь. Образ невесты - это состояние души, которое пройдет с вами сквозь несколько поколений и останется в памяти навсегда.
+                    .specifications__details
+                      h3.specifications__title Детали
+                      .table.specifications__table
+                        table
+                          tr
+                            td Стоимость
+                            td от 6000 ₽
+                          tr
+                            td Время
+                            td 20 - 90 мин
+
+      //.swiper-button-next
+      //.swiper-button-prev

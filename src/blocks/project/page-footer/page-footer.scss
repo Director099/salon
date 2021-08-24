@@ -1,0 +1,12 @@
+.page-footer {
+  background-color: $bg-footer;
+  color: $white;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.page-footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

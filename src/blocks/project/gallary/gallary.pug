@@ -1,0 +1,12 @@
+mixin gallary()
+  .gallary
+    .swiper-container.gallary__slider
+      .swiper-wrapper
+        each item, i in gallary
+          .swiper-slide
+            - const {text, img} = item
+            a.gallary__link(href=`img/content/${img}` data-fancybox="")
+              .gallary__picture
+                img(src=`img/content/${img}`, alt="Фото")
+              p.gallary__desc= text
+    .swiper-scrollbar

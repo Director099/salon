@@ -1,0 +1,38 @@
+.block-content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-position: center;
+  background-size: cover;
+
+  &--image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 700px;
+  }
+
+  &--light {
+    background-color: $bg-light;
+  }
+}
+
+.block-content__text-content {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.block-content__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.block-content__decor-text {
+  font-family: $font-family2;
+  font-size: 80px;
+  line-height: 1.2;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
