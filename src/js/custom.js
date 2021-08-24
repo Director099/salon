@@ -49,3 +49,39 @@ const swiperTabs = new Swiper(".swiper-tabs", {
     }
   }
 });
+
+ymaps.ready(init);
+var myMap,
+  myPlacemark;
+var yaCoordsOne = 60.718097;
+var yaCoordsTwo = 28.761495;
+var oxName = 'Standart 47';
+var OXphone = '+79876543210';
+var OXadres = 'г. Уфа, ул. Пушкина 19';
+
+function init() {
+  myMap = new ymaps.Map("map", {
+    center: [yaCoordsOne, yaCoordsTwo],
+    zoom: 16,
+    controls: []
+  });
+
+  myPlacemark = new ymaps.Placemark([yaCoordsOne, yaCoordsTwo], {
+    balloonContentBody: [
+      '<address><strong>' + oxName + '</strong><br/>'+ OXphone +'<br/>' + OXadres + '</address>'
+    ],
+    hintContent: oxName,
+  }, {
+    preset: 'islands#redIcon',
+    iconLayout: 'default#image',
+
+    iconImageHref: 'img/logo_map.svg',
+    iconImageSize: [64, 90],
+    iconImageOffset: [-34, -73]
+  });
+
+  myMap.geoObjects.add(myPlacemark);
+  myMap.behaviors.disable('scrollZoom')
+  myMap.behaviors.disable('drag');
+  myMap.controls.add(new ymaps.control.ZoomControl());
+}
