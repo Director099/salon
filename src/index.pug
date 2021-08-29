@@ -9,7 +9,7 @@ block content
     .main-picture(style="background-image: url('img/decor/salon.jpg')")
     +menu-line({
       list: menu
-    }).scrollto
+    }).scrollto.d-none.d-xl-block
     +block-content()(id="about-us").block-content--light
       .block-content__text-content
         section.text-content
@@ -35,7 +35,9 @@ block content
         h2.title-text Галерея
       +gallary()
     +block-content().block-content--image(style="background-image: url('img/decor/maybe.jpg')")
-      p.block-content__decor-text keep · looking #[br] is · the · beauty · that #[br] was · born · from #[br] our · souls
+      .block-content__wrap
+        p.block-content__decor-text keep · looking #[br] is · the · beauty · that #[br] was · born · from #[br] our · souls
+        a.btn.btn--transparent.btn--width(href="#") Запишитесь к нам
     +block-content()(id="contact")
       header.block-content__header
         h2.title-text НАШ INSTAGRAM

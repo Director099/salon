@@ -6,6 +6,7 @@
   @include ul-none;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .menu-line__link {

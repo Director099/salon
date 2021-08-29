@@ -1,13 +1,14 @@
-.specifications {
-
-}
-
 .specifications__row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .specifications__column {
-  width: 50%;
+  width: 100%;
+
+  @media (min-width: $screen-xl) {
+    width: 50%;
+  }
 }
 
 .specifications__picture {
@@ -17,7 +18,11 @@
 }
 
 .specifications__content {
-  padding: 60px 45px;
+  padding: 30px;
+
+  @media (min-width: $screen-xl) {
+    padding: 60px 45px;
+  }
 }
 
 .specifications__title {

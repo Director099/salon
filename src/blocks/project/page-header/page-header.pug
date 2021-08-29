@@ -4,7 +4,7 @@ mixin page-header()
       .page-header__row
         +logo('/')
           span Keep Looking
-        .page-header__nav.scrollto
+        .page-header__nav.scrollto.d-none.d-xl-block
           ul.menu
             each item, i in menu
               - const {text, href} = item

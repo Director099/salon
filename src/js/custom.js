@@ -1,7 +1,6 @@
 'use strict';
 
 import Collapse from "../blocks/components/collapse/collapse";
-import "../blocks/components/tabs/tabs";
 
 $(".scrollto a").click(function () {
   var elementClick = $(this).attr("href")
@@ -13,13 +12,19 @@ $(".scrollto a").click(function () {
 Collapse();
 
 new Swiper(".gallary__slider", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   scrollbar: {
     dragSize: 15,
     draggable: true,
     el: ".swiper-scrollbar",
   },
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+    }
+  }
 });
 
 const tabSlider = document.querySelector('.js-tab-slider');

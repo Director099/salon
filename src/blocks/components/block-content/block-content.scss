@@ -29,10 +29,18 @@
 
 .block-content__decor-text {
   font-family: $font-family2;
-  font-size: 80px;
+  font-size: 30px;
   line-height: 1.2;
   color: $white;
   text-transform: uppercase;
   text-align: center;
-  margin: 0;
+  margin: 0 0 30px;
+
+  @media (min-width: $screen-xl) {
+    font-size: 80px;
+  }
+}
+
+.block-content__wrap {
+  text-align: center;
 }
