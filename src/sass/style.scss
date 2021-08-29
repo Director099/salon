@@ -25,7 +25,9 @@
 @import "../blocks/components/tabs/tabs";
 @import "../blocks/components/menu/menu";
 @import "../blocks/components/logo/logo";
+@import "../blocks/components/burger/burger";
 @import "../blocks/components/display/display";
+@import "../blocks/components/mb-menu/mb-menu";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
@@ -61,3 +63,4 @@
   position: absolute;
   bottom: -7px;
 }
+

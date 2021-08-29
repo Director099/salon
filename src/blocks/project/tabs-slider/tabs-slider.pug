@@ -12,6 +12,8 @@ mixin tabs-slider()
               .specifications__row
                 .specifications__column
                   img.specifications__picture(src=`img/content/${img}`, alt="Изображение")
+                  .swiper-button-next.d-xl-none
+                  .swiper-button-prev.d-xl-none
                 .specifications__column
                   section.specifications__content
                     h2.specifications__title= title
@@ -28,5 +30,3 @@ mixin tabs-slider()
                             td Время
                             td 20 - 90 мин
 
-      //.swiper-button-next
-      //.swiper-button-prev

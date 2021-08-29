@@ -31,6 +31,8 @@ const babel = require('rollup-plugin-babel');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 
+const prettify = require('gulp-prettify');
+
 var prettyOption = {
   indent_size: 4,
   indent_char: ' ',
@@ -83,6 +85,12 @@ const pug2html = () => {
   return gulp.src(dirs.source + '/*.pug')
     .pipe(plumber())
     .pipe(pug())
+    .pipe(prettify({
+      indent_size: 2,
+      indent_char: ' ',
+      inline: [], // перенос строки для всех инлайн элементов
+      end_with_newline: true // перенос строки в конце файла
+    }))
     .pipe(prettyHtml(prettyOption))
     .pipe(gulp.dest(dirs.build))
     .pipe(server.stream());

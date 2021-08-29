@@ -2,9 +2,10 @@
 
 import Collapse from "../blocks/components/collapse/collapse";
 
-$(".scrollto a").click(function () {
+$(".js-scroll a").click(function () {
   var elementClick = $(this).attr("href")
   var destination = $(elementClick).offset().top;
+  $.fancybox.close();
   jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
   return false;
 });

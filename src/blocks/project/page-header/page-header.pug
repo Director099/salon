@@ -2,13 +2,15 @@ mixin page-header()
   header.page-header
     .container
       .page-header__row
+        +burger('Меню')(href="#mb-menu", data-fancybox="").d-lg-none
         +logo('/')
           span Keep Looking
-        .page-header__nav.scrollto.d-none.d-xl-block
-          ul.menu
-            each item, i in menu
-              - const {text, href} = item
-              li.menu-item
-                a(href= href)= text
+        .page-header__nav.js-scroll.d-none.d-lg-block
+          .mb-menu(id="mb-menu")
+            ul.menu
+              each item, i in menu
+                - const {text, href} = item
+                li.menu-item
+                  a(href= href)= text
         .page-header__info
-          a.link(href="tel:+7 499 350 80 50") +7 499 350 80 50
+          a.link.page-header__phone(href="tel:+7 499 350 80 50") +7 499 350 80 50

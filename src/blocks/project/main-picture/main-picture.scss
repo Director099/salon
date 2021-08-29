@@ -1,6 +1,10 @@
 .main-picture {
   display: block;
-  min-height: 700px;
+  min-height: calc(100vh - 60px);
   background-size: cover;
   background-position: center center;
+
+  @media (min-width: $screen-xl) {
+    min-height: 700px;
+  }
 }

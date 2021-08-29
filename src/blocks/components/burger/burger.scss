@@ -2,7 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-$toggler-part-height:         3px !default;
+$toggler-part-height:         2px !default;
 $toggler-part-bg-color:       #000 !default;
 
 $transition-time:             0.3s !default;
@@ -15,8 +15,8 @@ $transition-time:             0.3s !default;
   z-index: 1;
   display: inline-block;
   padding: 0;
-  width: 30px;
-  line-height: 30px;
+  width: 25px;
+  line-height: 20px;
   background: transparent;
   border: none;
   user-select: none;
@@ -46,11 +46,11 @@ $transition-time:             0.3s !default;
     }
 
     &:before {
-      top: -10px;
+      top: -7px;
     }
 
     &:after {
-      top: 10px;
+      top: 7px;
     }
   }
 
