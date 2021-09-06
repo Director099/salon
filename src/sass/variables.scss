@@ -19,13 +19,19 @@ $color-success:               #96BC5C;
 $color-danger:                hsl(2, 64%, 58%);
 $color-warning:               hsl(35, 84%, 62%);
 
-$bg-menu-line:                #abbab5;
+//$bg-menu-line:                #abbab5;
 
 $text-color:                  #323232;
-$bg-light:                    #f6ede8;
+//$bg-light:                    #abbab5;
+$bg-main-color:               #C48A8F;
+$bg-main-color2:              #FAEAEA;
 $bg-footer:                   #363636;
 $border-collapse:             #000;
-$color-light:                 #a29075;
+//$color-light:                 #a29075;
+
+$bg-light:                    $bg-main-color2;
+$bg-menu-line:                $bg-main-color;
+$color-light:                 $bg-main-color;
 
 // Базовая типографика
 
