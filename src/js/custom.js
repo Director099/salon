@@ -12,20 +12,24 @@ $(".js-scroll a").click(function () {
 
 Collapse();
 
-new Swiper(".gallary__slider", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  scrollbar: {
-    dragSize: 15,
-    draggable: true,
-    el: ".swiper-scrollbar",
-  },
+const gallarySlider = document.querySelectorAll(".gallary__slider");
 
-  breakpoints: {
-    1200: {
-      slidesPerView: 3,
+gallarySlider.forEach((item) => {
+  new Swiper(item, {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    scrollbar: {
+      dragSize: 15,
+      draggable: true,
+      el: item.parentNode.querySelector(".swiper-scrollbar"),
+    },
+
+    breakpoints: {
+      1200: {
+        slidesPerView: 3,
+      }
     }
-  }
+  });
 });
 
 const tabSlider = document.querySelector('.js-tab-slider');
